@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dti_project/views/signup_ui.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginUi extends StatefulWidget {
@@ -27,7 +28,9 @@ class _LoginUiState extends State<LoginUi> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
                   child: Icon(
                     Icons.arrow_back_ios,
                     color: Colors.black,
@@ -190,7 +193,14 @@ class _LoginUiState extends State<LoginUi> {
                     width: 5.0,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignupUi(),
+                        ),
+                      );
+                    },
                     child: Text(
                       'Sign Up',
                       style: TextStyle(

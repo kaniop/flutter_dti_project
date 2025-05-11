@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dti_project/views/login_ui.dart';
+import 'package:flutter_dti_project/views/signup_ui.dart';
 
 class WelcomeUi extends StatelessWidget {
   const WelcomeUi({super.key});
@@ -40,7 +42,14 @@ class WelcomeUi extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Login',
                   ),
@@ -55,7 +64,14 @@ class WelcomeUi extends StatelessWidget {
                   width: 20.0,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignupUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Sign Up',
                   ),
